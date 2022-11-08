@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"log"
-	"os"
 )
 
 func main() {
@@ -12,7 +10,7 @@ func main() {
 	rdb := newRDB()
 
 	s := newServer(rdb)
-	addr := fmt.Sprintf(":%s", os.Getenv("PORT"))
+	addr := ":16369"
 	log.Printf("Listening on %s\n", addr)
 	err := s.Listen(addr)
 	if err != nil {

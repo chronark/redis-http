@@ -14,7 +14,6 @@ FROM redis:latest
 COPY --from=builder /http-proxy/http-proxy /http-proxy
 
 
-ENV PORT 16379
 
 
-CMD ["sh", "-c", "redis-server -v & redis-server & /http-proxy & wait"]
+CMD ["sh", "-c", "redis-server & /http-proxy & wait"]
