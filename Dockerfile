@@ -17,4 +17,4 @@ COPY --from=builder /http-proxy/http-proxy /http-proxy
 ENV PORT 6379
 
 
-CMD ["sh", "-c", "redis-server -v & redis-server & /http-proxy & wait"]
+CMD ["sh", "-c", "redis-server -v & redis-server --port 16379 & /http-proxy & wait"]

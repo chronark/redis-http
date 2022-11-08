@@ -5,6 +5,8 @@ name: Release
 # separate terms of service, privacy policy, and support
 # documentation.
 
+concurrency: release
+
 on:
   push:
     branches: [ "main" ]
