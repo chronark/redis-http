@@ -8,7 +8,7 @@ import (
 
 	"github.com/go-redis/redis/v8"
 	"github.com/gofiber/fiber/v2"
-	// "github.com/gofiber/fiber/v2/middleware/recover"
+	"github.com/gofiber/fiber/v2/middleware/recover"
 )
 
 type server struct {
@@ -23,7 +23,7 @@ func newServer(rdb *RDB) *server {
 	}
 
 	app := fiber.New(appConfig)
-	// app.Use(recover.New())
+	app.Use(recover.New())
 	app.Server().LogAllErrors = true
 	app.Use(func(c *fiber.Ctx) error {
 
