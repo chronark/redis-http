@@ -13,7 +13,7 @@ type RDB struct {
 func newRDB() *RDB {
 	return &RDB{
 		client: redis.NewClient(&redis.Options{
-			Addr:     "localhost:16379",
+			Addr:     "localhost:6379",
 			Password: "",
 			DB:       0,
 		}),
